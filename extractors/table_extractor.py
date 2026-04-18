@@ -21,9 +21,11 @@ def extract_table(file_path: Path) -> str:
         else:
             return "NO_EXTENSION"
 
-        df = df.astype(str)
+        df = df.fillna('')
 
-        text = "\n".join(df.apply(lambda row: " ".join(row.values), axis=1))
+        text = "\n".join(
+            df.apply(lambda row: " ".join(map(str, row.values)), axis=1)
+        )
 
         return text
 
