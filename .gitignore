@@ -5,7 +5,7 @@ __pycache__/
 
 # C extensions
 *.so
-
+ПДнDataset/
 # Distribution / packaging
 .Python
 build/
